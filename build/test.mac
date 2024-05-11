@@ -1,0 +1,23 @@
+# Initialize the Geant4 session
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+# Set up your geometry
+# ... (Define your detector and materials)
+
+# Set up the General Particle Source (GPS)
+/gps/particle gamma
+/gps/energy 1.1 MeV  # Set the gamma-ray energy (adjust as needed)
+/gps/position 0 0 0 mm  # Set the source position (adjust as needed)
+/gps/direction 1 0 0  # Set the initial direction (isotropic)
+
+# Set the isotropic angular distribution for gamma rays
+/gps/ang/type iso
+
+# Set the number of particles per event
+/gps/number 100000
+
+# Run your simulation
+/run/beamOn 1  # Adjust the number of events as needed
